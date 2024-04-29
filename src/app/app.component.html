@@ -1,0 +1,26 @@
+<div class="app container">
+  <div class="card card-nav" style="margin-top: 2rem">
+    <div class="app container">
+      <div class="row">
+        <div class="col">
+          <p class="heading">Welcome, Kabelo</p>
+        </div>
+        <div class="col date">
+          <span>{{ date | date }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="" *ngFor="let room of rooms">
+      <app-room
+        [roomName]="room.name"
+        [temp]="room.temp"
+        [Humidity]="room.humidity"
+        [Light]="room.light"
+        [Plug]="room.plug"
+      ></app-room>
+    </div>
+  </div>
+</div>

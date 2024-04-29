@@ -1,0 +1,161 @@
+<!-- <div class="card">
+  <div class="card-header">
+    <h5 class="card-title">{{ roomName }}</h5>
+  </div>
+  <div class="card-body">
+    <div class="btn-grid">
+      <div class="button-container">
+        <button class="btn w-100 btn-info" (click)="toogleLight(roomName)">
+          <svg
+            width="18"
+            height="18"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 2L20 3"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3 2L4 3"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M21 16L20 15"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3 16L4 15"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M9 18H15"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 21H14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M11.9998 3C7.9997 3 5.95186 4.95029 5.99985 8C6.02324 9.48689 6.4997 10.5 7.49985 11.5C8.5 12.5 9 13 8.99985 15H14.9998C15 13.0001 15.5 12.5 16.4997 11.5001L16.4998 11.5C17.4997 10.5 17.9765 9.48689 17.9998 8C18.0478 4.95029 16 3 11.9998 3Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <p class="btn-label w-100">light</p>
+        <div class="indicator" [ngClass]="{ active: Light, ' ': !Light }"></div>
+      </div>
+      <div class="button-container">
+        <button class="btn w-100 btn-info" (click)="tooglePlug(roomName)">
+          <svg
+            style="color: white"
+            xmlns="http://www.w3.org/2000/svg"
+            width="27"
+            height="27"
+            fill="currentColor"
+            class="bi bi-activity"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"
+              fill="white"
+            ></path>
+          </svg>
+        </button>
+        <p class="btn-label w-100">plug</p>
+        <div class="indicator" [ngClass]="{ active: Plug, ' ': !Plug }"></div>
+      </div>
+      <div class="values">
+        <p>Temperature:</p>
+        <h1>{{ temp }} °C</h1>
+        <p>Humidity: {{Humidity}}%</p>
+        <h1>{{ Humidity }} %</h1>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <div class="card temp-card" style="margin-top: 1rem; height: 38.5rem;">
+                    <div class="card-body">
+                      <h1>Temperature</h1>
+                      <p class="temperature-color">{{temp}}°</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="car">
+                    <div class="card-body">
+                        <div class="row"style="margin-bottom: 2rem;">
+                            <div class="col">
+                                <div class="card humidity-color" style="width: auto; height: 20rem;">
+                                    <div class="card-body">
+                                      <h2 class="card-title" style="text-align: right; margin-right: 3rem;">Humidity</h2>
+
+                                      <div class="row">
+                                        <div class="col">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" fill="currentColor" class="bi bi-thermometer-sun text-primary" viewBox="0 0 16 16">
+                                                <path d="M5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585A1.5 1.5 0 0 1 5 12.5"/>
+                                                <path d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1m5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5m4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0M8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5M12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5m-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708M8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5"/>
+                                              </svg>
+                                        </div>
+                                        <div class="col">
+                                            <p style="font-size: 10rem;">{{Humidity}}</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                  </div>
+                            </div>
+                          </div>
+                          <div class="row" >
+                            <div class="col">
+                                <div class="card light-color" style="width: auto;">
+                                    <div class="card-body">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="172" height="172" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                                        <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5"/>
+                                      </svg>
+                                      <br>
+                                      <a class="btn stretched-link" (click)="toogleLight(roomName)">Lamp</a>
+                                      <div class="indicator1" [ngClass]="{ active: Light, ' ': !Light }"></div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col">
+                              <div class="card socket-color" style="width: auto; ">
+                                    <div class="card-body">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="172" height="172" fill="currentColor" class="bi bi-outlet" viewBox="0 0 16 16">
+                                        <path d="M3.34 2.994c.275-.338.68-.494 1.074-.494h7.172c.393 0 .798.156 1.074.494.578.708 1.84 2.534 1.84 5.006s-1.262 4.297-1.84 5.006c-.276.338-.68.494-1.074.494H4.414c-.394 0-.799-.156-1.074-.494C2.762 12.297 1.5 10.472 1.5 8s1.262-4.297 1.84-5.006m1.074.506a.38.38 0 0 0-.299.126C3.599 4.259 2.5 5.863 2.5 8s1.099 3.74 1.615 4.374c.06.073.163.126.3.126h7.17c.137 0 .24-.053.3-.126.516-.633 1.615-2.237 1.615-4.374s-1.099-3.74-1.615-4.374a.38.38 0 0 0-.3-.126h-7.17z"/>
+                                        <path d="M6 5.5a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5M7 10v1h2v-1a1 1 0 0 0-2 0"/>
+                                      </svg>
+                                      <a class="btn stretched-link" (click)="tooglePlug(roomName)">Socket</a>
+                                      <div class="indicator" [ngClass]="{ active: Plug, ' ': !Plug }"></div>
+                                    </div>
+                                  </div>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+</div>
